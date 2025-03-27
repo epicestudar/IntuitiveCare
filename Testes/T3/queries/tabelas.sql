@@ -1,4 +1,4 @@
--- Criar tabela para Demonstrações Contábeis
+-- Criação de tabela para Demonstrações Contábeis
 CREATE TABLE demonstracoes_contabeis (
     id SERIAL PRIMARY KEY,
     data DATE NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE demonstracoes_contabeis (
     trimestre VARCHAR(5)
 );
 
--- Criar tabela para Operadoras Ativas
+-- Criação de tabela para Operadoras Ativas
 CREATE TABLE operadoras_ativas (
     id SERIAL PRIMARY KEY,
     registro_ans VARCHAR(20) NOT NULL,
