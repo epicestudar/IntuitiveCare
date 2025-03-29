@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "effa0289-3e3d-41c7-bed6-ebebfe659a4f",
+		"name": "Testes API Operadoras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39936026"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadora",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search?query=17687511000126",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "17687511000126"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
