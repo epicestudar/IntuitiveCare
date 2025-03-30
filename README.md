@@ -18,10 +18,10 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Sumário 📰" alt="Typing SVG" /></a>
 
-- [Teste 1](#teste1)
-- [Teste 2](#teste2)
-- [Teste 3](#teste3)
-- [Teste 4](#teste4)
+- [Teste 1 - Web Scraping](#teste-1---web-scraping)
+- [Teste 2 - Transformação de Dados](#teste-2---transformacao-de-dados)
+- [Teste 3 - Banco de Dados](#teste-3---banco-de-dados)
+- [Teste 4 - API](#teste-4---api)
   
 <br><br><br>
 
@@ -35,7 +35,7 @@ Este repositório descreve os quatro testes realizados para a avaliação técni
 <br><br><br>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Web Scraping" alt="Typing SVG" /></a>
-## Teste 1
+## Teste 1 - Web Scraping
 
 ### Objetivo:
 Automatizar a extração de arquivos PDF a partir do site da ANS (Agência Nacional de Saúde Suplementar), compactando-os em um único arquivo.
@@ -62,8 +62,8 @@ Automatizar a extração de arquivos PDF a partir do site da ANS (Agência Nacio
 <br><br><br>
 
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 2" alt="Typing SVG" /></a>
-## 2. Teste de Transformação de Dados
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Transformação de Dados" alt="Typing SVG" /></a>
+## Teste 2 - Transformação de Dados
 
 ### Objetivo:
 Extrair dados tabulares do Anexo I baixado no Teste 1, estruturá-los e salvá-los em um arquivo CSV para posterior análise.
@@ -93,8 +93,8 @@ Extrair dados tabulares do Anexo I baixado no Teste 1, estruturá-los e salvá-l
 - **Bibliotecas**: PyMuPDF, pandas, zipfile
 <br><br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 3" alt="Typing SVG" /></a>
-## 3. Teste de Banco de Dados
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Banco de Dados" alt="Typing SVG" /></a>
+## Teste 3 - Banco de Dados
 
 ### Objetivo:
 Baixar, estruturar e analisar dados financeiros das operadoras de planos de saúde utilizando um banco de dados SQL.
@@ -125,8 +125,8 @@ Baixar, estruturar e analisar dados financeiros das operadoras de planos de saú
 - **Ferramenta**: pgAdmin
 <br><br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 4" alt="Typing SVG" /></a>
-## 4. Teste de API
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=API" alt="Typing SVG" /></a>
+## Teste 4 - API
 
 ### Objetivo:
 Criar uma interface web utilizando Vue.js para buscar operadoras de saúde em um servidor Python, retornando os dados relevantes via API.
