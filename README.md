@@ -29,66 +29,98 @@
 ## Testes de Integração - Projeto IntuitiveCare
 
 ### Contexto Inicial
-Este repositório contém diversos testes de integração para a aplicação de gerenciamento de operadoras e demonstrações contábeis. Abaixo estão detalhados os testes realizados e como eles funcionam.
+Este repositório descreve os quatro testes realizados para a avaliação técnica. Cada teste envolve uma etapa fundamental para o processamento, transformação e análise de dados relacionados às operadoras de planos de saúde.
+
 
 <br><br><br>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 1" alt="Typing SVG" /></a>
-## Teste 1: Importação de Dados para Demonstrações Contábeis
+## 1. Teste de Web Scraping
 
 ### Objetivo:
-Importar e processar dados financeiros contábeis (demonstrações contábeis) de uma estrutura de diretórios organizada.
+Automatizar a extração de arquivos PDF a partir do site da ANS (Agência Nacional de Saúde Suplementar), compactando-os em um único arquivo.
 
-### Estrutura de Dados: 
+### Tarefas Executadas: 
 
-- Colunas:
-  - DATA
-  - REG_ANS
-  - CD_CONTA_CONTABIL
-  - DESCRICAO
-  - VL_SALDO_INICIAL
-  - VL_SALDO_FINAL
- 
+   #### 1. Acesso ao site da ANS: 
+   - URL: https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos
 
-### Objetivos do teste: 
-- Validar se os dados são importados corretamente.
-- Garantir que os dados estejam estruturados de forma consistente para manipulação posterior.
+
+   #### 2. Download dos Anexos I e II:
+   - Extração automatizada dos links dos anexos.
+   - Download dos arquivos no formato PDF.
+
+
+   #### 3. Compactação dos arquivos:
+   - Os PDFs foram agrupados em um único arquivo ZIP/RAR para organização e otimização do armazenamento.
+
+
+### Tecnologias utilizadas: 
+- **Linguagem**: Python
+- **Bibliotecas**: requests, BeautifulSoup, os, zipfile
 
 <br><br><br>
 
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 2" alt="Typing SVG" /></a>
-## Teste 2: Processamento de Operadoras Ativas
+## 2. Teste de Transformação de Dados
 
 ### Objetivo:
-Carregar e processar os dados das operadoras ativas a partir de um arquivo CSV.
+Extrair dados tabulares do Anexo I baixado no Teste 1, estruturá-los e salvá-los em um arquivo CSV para posterior análise.
 
-### Estrutura de Dados: 
+### Tarefas Executadas: 
 
-- Colunas:
-  - Registro_ANS
-  - CNPJ
-  - Razao_Social
-  - Nome_Fantasia
-  - Modalidade
-  - Logradouro
-  - Numero
-  - Complemento
-  - Bairro
-  - Cidade
-  - UF
-  - CEP
-  - DDD
-  - Telefone
-  - FAX
-  - Endereco_Eletronico
-  - Representante
-  - Cargo_Representante
-  - Regiao_de_Comercializacao
-  - Data_Registro_ANS
- 
+   #### 1. Extração dos dados da tabela "Rol de Procedimentos e Eventos em Saúde"
+   - Conversão de todas as páginas do PDF em texto estruturado.
+   - Identificação e extração correta das colunas e linhas da tabela.
 
-### Objetivos do teste: 
-- Validar o processamento de dados das operadoras ativas.
-- Garantir que a importação seja feita de maneira eficiente e com o formato adequado para uso posterior.Garantir que os dados estejam estruturados de forma consistente para manipulação posterior.
+
+   #### 2. Armazenamento estruturado em CSV
+   - Conversão dos dados extraídos para o formato tabular.
+   - Salvamento em um arquivo .csv para facilitar a análise posterior.
+
+
+   #### 3. Compactação do CSV
+   - O arquivo CSV gerado foi compactado como "Teste_Vinicius.zip" para reduzir o tamanho e facilitar o compartilhamento.
+
+
+   #### 4. Substituição de Abreviações
+   - As colunas OD e AMB foram substituídas pelos seus nomes completos conforme a legenda no rodapé do PDF.
+
+
+### Tecnologias utilizadas: 
+- **Linguagem**: Python
+- **Bibliotecas**: PyMuPDF, pandas, zipfile
+<br><br><br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 3" alt="Typing SVG" /></a>
+## 3. Teste de Banco de Dados
+
+### Objetivo:
+Baixar, estruturar e analisar dados financeiros das operadoras de planos de saúde utilizando um banco de dados SQL.
+
+### Tarefas Executadas: 
+
+   #### 1. Download dos arquivos necessários
+   - **Demonstrações contábeis dos últimos 2 anos**: https://dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/
+   - **Dados cadastrais das operadoras ativas**: https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/
+
+
+   #### 2. Criação do Banco de Dados
+   - Definição da estrutura das tabelas para armazenar os dados extraídos dos arquivos CSV.
+
+
+   #### 3. Importação dos Dados
+   - Inserção dos registros no banco de dados, garantindo a correta codificação dos caracteres.
+
+
+   #### 4. Consultas Analíticas
+   - **Consulta 1**: Identificação das 10 operadoras com maiores despesas em "**Eventos/Sinistros Conhecidos ou Avisados de Assistência à Saúde Médico-Hospitalar**" no último trimestre.
+   - **Consulta 2**: Identificação das 10 operadoras com maiores despesas nessa mesma categoria no último ano.
+
+
+### Tecnologias utilizadas: 
+- **Banco de Dados**: PostgreSQL 10+
+- **Linguagem**: SQL
+- **Ferramenta**: pgAdmin
 <br><br><br>
