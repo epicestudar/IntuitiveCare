@@ -124,3 +124,35 @@ Baixar, estruturar e analisar dados financeiros das operadoras de planos de saú
 - **Linguagem**: SQL
 - **Ferramenta**: pgAdmin
 <br><br><br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=440&size=22&pause=1000&color=185DF7FF&center=false&vCenter=false&repeat=false&width=435&lines=Teste 4" alt="Typing SVG" /></a>
+## 4. Teste de API
+
+### Objetivo:
+Criar uma interface web utilizando Vue.js para buscar operadoras de saúde em um servidor Python, retornando os dados relevantes via API.
+
+
+### Tarefas Executadas: 
+
+   #### 1. Preparação dos Dados
+   - Utilização do CSV baixado no Teste 3 para alimentar a API.
+
+
+   #### 2. Criação da API com FastAPI
+   - Implementação de um servidor backend em Python para fornecer um endpoint de busca textual na base de operadoras.
+
+
+   #### 3. Desenvolvimento da Interface Web
+   - Implementação de um formulário no Vue.js para permitir buscas interativas.
+   - Exibição dos resultados em tempo real.
+
+
+   #### 4. Testes com Postman
+   - Criação de uma coleção no Postman para demonstrar o funcionamento da API e validar os retornos dos endpoints.
+
+
+### Tecnologias utilizadas: 
+- **Backend**: FastAPI (Python)
+- **Frontend**: Vue.js
+- **Ferramenta**: Postman, Axios
+<br><br><br>
